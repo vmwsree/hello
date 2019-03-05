@@ -29,8 +29,7 @@
   }else if ([@"RazorPayForm" isEqualToString:call.method]){
           NSDictionary* argsMap = call.arguments;
 
-      //razorpay = [Razorpay initWithKey:@"rzp_live_zPHQ09xGSyS49d" andDelegate:self];
-        razorpay = [Razorpay initWithKey:@"rzp_test_mxXAd9uuo8XUme" andDelegate:self];
+      razorpay = [Razorpay initWithKey:@"rzp_live_zPHQ09xGSyS49d" andDelegate:self];
       
       NSDictionary *options = @{
                                 @"amount" : (NSNumber*)argsMap[@"amount"],
