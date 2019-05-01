@@ -1,4 +1,4 @@
-group 'com.hashbnm.razorpayplugin'
+group 'work.innov8.hello'
 version '1.0-SNAPSHOT'
 
 buildscript {

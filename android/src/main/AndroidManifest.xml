@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.hashbnm.razorpayplugin">
+  package="work.innov8.hello">
     <application>
         <activity
                 android:name=".RazorpayActivity"

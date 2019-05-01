@@ -1,4 +1,4 @@
-package com.hashbnm.razorpayplugin;
+package work.innov8.hello;
 
 import android.app.Activity;
 import android.content.Intent;
