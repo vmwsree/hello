@@ -1,4 +1,4 @@
-group 'work.innov8.hello'
+group 'com.hashbnm.razorpayplugin'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.2.0'
     }
 }
 
@@ -25,10 +25,15 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 16
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion 19
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+
+dependencies {
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    implementation 'com.razorpay:checkout:1.5.2'
 }
