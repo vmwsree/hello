@@ -14,7 +14,7 @@ import java.io.Serializable;
 /**
  * RazorpayPlugin
  */
-public class RazorpayPlugin implements MethodCallHandler, PluginRegistry.ActivityResultListener {
+public class HelloPlugin implements MethodCallHandler, PluginRegistry.ActivityResultListener {
     private final MethodChannel channel;
     private Activity activity;
     private Result pendingResult;
