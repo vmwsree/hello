@@ -30,7 +30,7 @@ public class HelloPlugin implements MethodCallHandler, PluginRegistry.ActivityRe
      * Plugin registration.
      */
     public static void registerWith(Registrar registrar) {
-        final MethodChannel channel = new MethodChannel(registrar.messenger(), "razorpay_plugin");
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), "hello");
         HelloPlugin instance = new HelloPlugin(registrar.activity(), channel);
         channel.setMethodCallHandler(instance);
         registrar.addActivityResultListener(instance);
