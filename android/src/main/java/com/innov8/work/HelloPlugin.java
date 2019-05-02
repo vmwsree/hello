@@ -20,7 +20,7 @@ public class HelloPlugin implements MethodCallHandler, PluginRegistry.ActivityRe
     private Result pendingResult;
     private Map<String, Object> arguments;
 
-    public RazorpayPlugin(Activity activity, MethodChannel channel) {
+    public HelloPlugin(Activity activity, MethodChannel channel) {
         this.activity = activity;
         this.channel = channel;
         this.channel.setMethodCallHandler(this);
@@ -31,7 +31,7 @@ public class HelloPlugin implements MethodCallHandler, PluginRegistry.ActivityRe
      */
     public static void registerWith(Registrar registrar) {
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "razorpay_plugin");
-        RazorpayPlugin instance = new RazorpayPlugin(registrar.activity(), channel);
+        HelloPlugin instance = new HelloPlugin(registrar.activity(), channel);
         channel.setMethodCallHandler(instance);
         registrar.addActivityResultListener(instance);
     }
