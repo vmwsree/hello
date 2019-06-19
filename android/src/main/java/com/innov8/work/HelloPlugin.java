@@ -66,13 +66,19 @@ public class HelloPlugin implements MethodCallHandler, PluginRegistry.ActivityRe
                 String response = intent.getStringExtra("payment_id");
                 data.put("code", "1");
                 data.put("message", response);
-                pendingResult.success(data);
+                if(pendingResult != null){
+                 pendingResult.success(data);
+                }
+
             } else {
                 HashMap<String, String> data = new HashMap<>();
                 String response = intent.getStringExtra("payment_id");
                 data.put("code", "0");
                 data.put("message", response);
-                pendingResult.success(data);
+                if(pendingResult != null){
+                 pendingResult.success(data);
+                }
+                
             }
             pendingResult = null;
             arguments = null;
